@@ -49,7 +49,7 @@ Planning vs search:
 In the following figure, boxes on the left indicate states and the green texts are the operators.
 - Note that an operator have pre- and postconditions matching the corresponding states. (Recall that an agent is able to map percepts to actions.)
 
-![[Pasted image 20231017000458.png]]
+![](img/20231017000458.png)
 
 ## Partial order planning
 
@@ -62,7 +62,7 @@ In the following figure, boxes on the left indicate states and the green texts a
 	- The robot first looks for an operator that has the postcondition that matches the goal state - `Painted(Ceiling)`. In this case, it is the operator `paint-ceiling`
 	- Then, the robot *works backward* to look for am operator that has the postcondition that matches the postcondition of `paint-ceiling`
 
-![[Pasted image 20231017105710.png]]
+![](img/20231017105710.png)
 
 ### Detecting conflicts
 - For each precondition in current plan: 
@@ -71,7 +71,7 @@ In the following figure, boxes on the left indicate states and the green texts a
 	- Example: The red arrow in the following figure indicates a conflict between `climb-ladder`'s precondition and a state in another plan
 		- Result: promote `Painted(Ceiling)` above `Painted(Ladder)`
 
-![[Pasted image 20231017111145.png]]
+![](img/20231017111145.png)
 
 ### Open-condition problem:
 - For example:
@@ -80,7 +80,7 @@ In the following figure, boxes on the left indicate states and the green texts a
 	- This create an **open precondition**: the precondition of `paint-ladder`,  i.e. `on(Robot, Floor)` is not satisfied
 	- To solve this, the robot selects an operator to fulfill the open precondition: `descend-ladder`
 
-![[Pasted image 20231017112237.png]]
+![](img/20231017112237.png)
 
 - We can view partial order planning as an interaction between several different kinds of agents/ abilities - each agent represents a small micro ability:
 	- an agent that generates plans for each of the partial goals
@@ -100,7 +100,7 @@ In the following figure, boxes on the left indicate states and the green texts a
 
 For example: 
 
-![[Pasted image 20231017115401.png]]
+![](img/20231017115401.png)
 
 - In the above figure, `unstack` and `stack-ascending` are the macro operators.
 
