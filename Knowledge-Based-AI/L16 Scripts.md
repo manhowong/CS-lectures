@@ -40,7 +40,7 @@ scenes :  -----> See below
 ```
 
 ![](img/20231101142219.png)
-![](img/20231101142350.png)
+
 (prim.: privative action)
 
 ### Form vs. content
@@ -69,5 +69,5 @@ A script may have different tracks for different situations:
 
 - Scripts: strongly connected to theories of cognition, e.g. brain is a predictive machine
 - We generate expectations and act on those expectations
-- Question: Do we generate scripts at run time?:
+- Question: Do we generate scripts at run time?
 - We have mental models or scripts, and they can be cultural specific.

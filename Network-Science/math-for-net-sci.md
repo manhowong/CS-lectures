@@ -18,5 +18,7 @@ If you are planning to take CS 7280 without a math or quantitative background, b
 - Submodularity
 - Proof by contradiction (and other methods of math proof)
 - Set membership, subset, union, intersection, cardinality (Set Theory)
+- Likelihood, profile likelihood
+- If you don't have a Math background, this could be confusing: In Math, "log" usually means "natural log", but it may also mean "long base 10" or "log base 2" in other fields!
 
 (The list is growing...)

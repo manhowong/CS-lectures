@@ -15,7 +15,7 @@
 - This technique involves two models: a specific one and a general one
 
 The figure below:
-- Red square: a specific model
+- Orange square: a specific model
 - Blue square: a general model
 - As we provide positive and negative samples to the agent, it generalizes the specific model and specializes the general model.
 - As the models are being updated during the process, some of the data no longer fit some versions of these models
@@ -30,8 +30,8 @@ For each example:
 	- **Generalize** all **specific models** to include it
 	- **Prune** away any models that cannot include it
 - If the example is **negative**:
-	- **Specialize** all **general models** to include it
-	- **Prune** away any models that cannot include it
+	- **Specialize** all **general models** to exclude it
+	- **Prune** away any models that cannot exclude it
 - **Prune** away any **models subsumed by other models**
 
 ### Example
@@ -63,7 +63,7 @@ More examples:
 ## Identification trees
 
 - Discrimination tree learning (see Lesson 9 Case-Based Learning):
-	- we learn the tree incrementally
+	- we learn/build the tree incrementally
 	- it doesn't guarantee the optimality of the discrimination tree for the cases being studied: i.e. at retrieval phase when a new problem arrives, traverse in the tree might take a long time
 - Alternative: **decision tree learning**
 	- *all examples* need to be given right at the beginning
@@ -82,7 +82,7 @@ More examples:
 - optimal trees: fewer branches
 ## Cognitive connection
 
-- Cognitive agents also face the issues of over- or undergeneralization
+- Cognitive agents also face the issues of over- or undergeneralization (biases)
 - Related to cognitive flexibility: agent has multiple prospectuses on the same thing. 
 	- Agent has several definitions for a concept that converge over time
 	- Agent comes up with one generalization. If this fails in the real world, the agent learns from mistakes and correct itself.

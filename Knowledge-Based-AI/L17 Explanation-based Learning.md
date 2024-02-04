@@ -25,9 +25,9 @@ In the above knowledge representation of a brick, orange arrows indicate **causa
 ## Abstraction
 
 - An AI agent abstracts knowledge from the concepts it already knows
-- the knowledge abstracted that are causally related
+- the knowledge abstracted that are *causally related*
 - The agent is trying to build a **causal explanation** that will connect the instance (the object bowl) to the cup.
-- The agent creates an abstraction of the bowl (so the bowl is replaced by the object)
+- The agent creates an **abstraction** of the bowl (so the bowl is replaced by the object)
 
 ![](img/20231102173849.png)
 

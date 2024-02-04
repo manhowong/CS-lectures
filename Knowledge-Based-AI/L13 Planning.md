@@ -21,8 +21,8 @@ If a robot's goals are to paint the ladder and the ceiling:
 			On(Robot, Ladder)
 	```
 - *Syntax* of an operator: an operator contains precondition and postcondition
-	- Preconditions: assertions that are true in the world before the operator can be applied
-	- Postconditions: assertions that are true in the world after applying the operator
+	- **Preconditions**: assertions that are true in the world before the operator can be applied
+	- **Postconditions**: assertions that are true in the world after applying the operator
 - The operator can only be applied if and only if the preconditions are true in the world
 - **By convention, all literals in precondition are positive literals.** (Postcondition may have negative literals.) 
 - Example 2: `Paint-ceiling`
@@ -59,8 +59,8 @@ In the following figure, boxes on the left indicate states and the green texts a
 - E.g. A robot's goal is to paint the ceiling and the ladder, i.e. two **partial goals**: `Painted(Ceiling)` and `Painted(Ladder)`
 - The robot plans for each partial goal independently (one plan for each partial goal)
 - For example, for the goal `Painted(Ceiling)`:
-	- The robot first looks for an operator that has the postcondition that matches the goal state - `Painted(Ceiling)`. In this case, it is the operator `paint-ceiling`
-	- Then, the robot *works backward* to look for am operator that has the postcondition that matches the postcondition of `paint-ceiling`
+	- The robot *first looks for an operator* that has the postcondition that matches the goal state - `Painted(Ceiling)`. In this case, it is the operator `paint-ceiling`
+	- Then, the robot *works backward* to look for an operator that has the postcondition that matches the precondition of `paint-ceiling`
 
 ![](img/20231017105710.png)
 

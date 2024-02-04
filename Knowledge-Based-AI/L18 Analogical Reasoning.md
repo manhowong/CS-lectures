@@ -26,8 +26,7 @@ For case-based reasoning, objects in the target case and the source case are the
 
 - Compare the above process with that of case-based reasoning:
 	- In case-based reasoning, since cases are in the same domain, adaptation is enough (instead of mapping and transfer shown here)
-- In some other theories, mapping is part of the retrieval phase: you do mapping in order to do retrieval
-
+- In some other theories, mapping is part of the retrieval phase: you do mapping first in order to retrieve relevant knowledge
 ### Analogical retrieval
 What criteria should we use to decide similarities between cases?
 
@@ -44,7 +43,7 @@ Example Raven's problems:
 #### Types of similarity
 - **Semantic**: Conceptual similarity between the target problem and the source case. (e.g. climbing a ladder and climbing a stairs)
 - **Pragmatic**: Similarity of external factors, such as goals.
-- **Structural**: Similarity  between representational structures.
+- **Structural**: Similarity between representational structures.
 - One may apply different weights on different types of similarity
 
 ### Analogical mapping
@@ -74,7 +73,7 @@ Another example: What would be transferred into the atomic structure model?
 
 ![](img/20231103073219.png)
 
-**Bold words**: Things that are transferred from the source case to the target case
+**Bolded words**: Things that are transferred from the source case to the target case
 ![](img/20231103074301.png)
 
 ### Evaluation and storage
@@ -93,7 +92,7 @@ Another example: What would be transferred into the atomic structure model?
 		- align two cases at different levels by relationships
 		- e.g. at structural level, after mapping the corresponding objects, we can transfer features of a lizard to the robot (e.g. shape of its feet)
 	- **Compositional analogy**: 
-		- map at the level of structure first
+		- map at the structural level first
 		- structural mapping enables transfer of info which in turn helps us to transfer info at the behavioral level
 		- lastly, we can climb up the hierarchy and transfer info at functional levels
 	- **Compound analogy:**
@@ -117,7 +116,7 @@ Another example: What would be transferred into the atomic structure model?
 - Compound and compositional analogies
 - Visuospatial analogies
 - Conceptual combination (analogical learning is an example)
-- 
+
 ## Cognitive connection
 
 - Analogy is central to cognition
