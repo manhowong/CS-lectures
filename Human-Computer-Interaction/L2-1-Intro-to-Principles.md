@@ -6,7 +6,7 @@ Norman, D. A. (1986). Cognitive engineering. In D. A. Norman & S. W. Draper (Eds
 
 # Interfaces: between users and tasks
 
-- Focus on the interaction between the user and the *task* through the interface, not the interaction between the user and the interface itself!
+- Focus on the interaction between the user and the ***task*** through the interface, not the interaction between the user and the interface itself!
 - Understand the tasks is important
 
 ## Tips for identifying tasks
@@ -35,7 +35,7 @@ Norman, D. A. (1986). Cognitive engineering. In D. A. Norman & S. W. Draper (Eds
 - Interface must:
     - fit within human limits (e.g. sense, memory, what users can do physically)
     - Usability: the interface is physically usable
-- evaluated by quantitative experiments:
+- evaluated by quantitative experiments ('How dos the user do the task?'):
     - e.g. time to complete a task, reaction time to stimulus, etc.
 
 ## Predictor
@@ -45,7 +45,7 @@ Norman, D. A. (1986). Cognitive engineering. In D. A. Norman & S. W. Draper (Eds
 - we need to understand the user's thoughts and feeling
 - Interface must:
     - fit with knowledge (leveraging existing knowledge, helping users learn new knowledge)
-- Evaluated by qualitative studies:
+- Evaluated by qualitative studies ('What does the user want/what are they thinking?'):
     - usually done in lab settings (ex situ)
     - e.g. task analysis, cognitive walkthrough, etc.
 

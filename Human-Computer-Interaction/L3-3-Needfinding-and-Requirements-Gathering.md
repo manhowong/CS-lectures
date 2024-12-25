@@ -39,24 +39,24 @@ Common data you can collect:
 ## Possible biases
 
 1. **Confirmation bias**
-    - We tend to notice the things that confirm our prior beliefs
+    - We tend to notice the things that confirm our **prior beliefs**
     - Avoid this by
-        - specifically looking for signs that disconfirm your beliefs by testing your belief empirically
-        - involving people with different backgrounds and beliefs in your needfinding process
+        - **specifically looking** for signs that disconfirm your beliefs by testing your belief empirically
+        - involving people with **different backgrounds and beliefs** in your needfinding process
 2. **Observer bias**
     - We may subconsciously influence the user's responses because we want to see a particular result, e.g. asking leading questions
     - Avoid this by: 
-        - separating experimenters with motives from the participants
-        - by heavily scripting interactions with users
-        - by having someone else to review your interview scripts and your survey for leading questions
+        - **separating experimenters** with motives from the participants
+        - by **heavily scripting interactions** with users
+        - by having **someone else to review** your interview scripts and your survey for leading questions
 3. **Social desirability bias**
     - People may give answers that they think are socially desirable, e.g. if they know you are the designer of an interface, they may say nice things about it that make you happy!
     - Avoid this by:
-        - conducting more naturalistic observations
-        - recording objective data
+        - conducting more **naturalistic** observations
+        - recording **objective** data
 4. **Voluntary response bias**
-    - People who have strong opinions are more likely to respond to optional surveys
-    - causes oversampling of more extreme views
+    - People who have **strong opinions** are more likely to respond to optional surveys
+    - causes **oversampling of more extreme views**
     - Avoid this by:
         - limiting how much of the survey content is shown to users before they begin it
         - confirming conclusions with other methods
@@ -72,7 +72,7 @@ Common data you can collect:
 
 ## Naturalistic observation
 
-- Observe people in their natural environment
+- Observe people in their **natural environment**
 - Useful for understanding the problem space and giving you ideas for things to investigate further
 - Limitations:
     - ethics: you can't record people without their consent
@@ -110,8 +110,8 @@ Common data you can collect:
 
 - **Hacks** may uncover errors
 - **Errors** are mistakes that users make when using an interface:
-    - **Slips**: errors that occur when the user knows what to do (correct mental model), but makes a mistake in doing it
-    - **Mistakes**: errors that occur when the user has a weak mental model
+    - **Slips**: errors that occur when the user **knows what to do** (correct mental model), but **makes a mistake** in doing it
+    - **Mistakes**: errors that occur when the user has a **weak mental model**
 - Fix the errors to improve the design
 - Use errors to understand the user's mental model
 
@@ -126,8 +126,8 @@ Common data you can collect:
 - **Focus group**:
     - a group of people talking about a topic
     - can elicit more ideas than individual interviews
-    - risk: overly convergent thinking
-    - should be used in conjunction with other methods e.g. interviews
+    - risk: **overly convergent thinking**
+    - should be used **in conjunction with other methods** e.g. interviews
 
 ### Tips for interviews
 
@@ -141,9 +141,9 @@ Common data you can collect:
     - participants are the ones who do the majority of talking!
     - Don't reveal anything that might predispose them to agree with you
 4. Organize the interview
-    - introduction phase, some light questions to build trust
-    - summary at the end (so they understand the purpose of the interview)
-    - be ready to improvise
+    - **introduction phase**, some light questions to build trust
+    - **summary** at the end (so they understand the purpose of the interview)
+    - be ready to **improvise**
 5. Practice
     - You want to get the most out of your interview!
 
@@ -152,7 +152,7 @@ Common data you can collect:
 - Ask the user to verbalize their perceptions when performing a task
 - Useful to get user's thoughts before they forget
 - Risk: users need to think deliberately about what they are doing, which may change their behavior
-- We should pay attention to the differences in what they do when they are thinking aloud
+- We should pay attention to the **differences in what they do when they are thinking aloud**
 
 Alternative to think-aloud method:
 - **Post-event protocol**: ask the user to describe what they were thinking immediately after the task is done
@@ -181,27 +181,27 @@ Alternative to think-aloud method:
 
 ### Writing good survey questions
 
-- Be clear
+- Be **clear**
     - easy to understand
     - avoid overlapping ranges (e.g. 1-5, 6-10)
     - when in doubt, provide extra detail
     - timebox frequency-based questions (e.g. "How often do you exercise?" vs. "How many times have you exercised in the past week?")
-- Be concise
+- Be **concise**
     - use plain language
-- Be specific
+- Be **specific**
     - avoid questions on super-big ideas
     - avoid double-barreled questions (e.g. "Do you like the color *and* the shape of this button?")
     - avoid questions that allow internal conflict
     - Break down complex questions into multiple questions
-- Allow participants to be expressive
+- Allow participants to be **expressive**
     - use ranges instead of yes/no questions
     - allow multiple answers
     - allow users to add nominal categories (e.g. "other (please specify)")
     - leave potentially open-ended questions open
-- Be unbiased
+- Be **unbiased**
     - avoid leading questions
     - avoid loaded questions
-- Be usable
+- Be **usable**
     - provide a progress bar
     - make page lengths consistent
     - order questions logically
@@ -219,14 +219,14 @@ Alternative to think-aloud method:
 
 ![Alt text](image-1.png)
 
-- Needfinding is a phase of the design lifecycle, but it is also an iterative process in itself
+- Needfinding is a phase of the design lifecycle, but it is also **an iterative process in itself**
 - e.g. use a needfinding method to identify questions to ask in another needfinding method
 -  Revisiting the inventory
 
 # Representing the need
 
 - formalize the data you have collected into a model of the user
-- e.g. using a flowchart to represent the user's task
+- e.g. using a **flowchart** to represent the user's task
 
 # Defining the requirements
 

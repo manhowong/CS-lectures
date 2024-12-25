@@ -38,7 +38,13 @@ These are my personal lecture notes for Georgia Tech's [Reinforcement Learning c
     $S_{t-1} \xrightarrow{R_t} S_t$
 
     - $\displaystyle V_{T}(s_{t-1}) = V_{T-1}(s_{t-1}) + \alpha_T \left[ R_{t} + \gamma V_{T-1}(s_{t}) - V_{T}(s_{t-1}) \right]$
-    - $V_T(s) = V_{T-1}(s), \text{otherwise.}$
+    - $V_T(s) = V_{T-1}(s), \text{otherwise.}$ (We're not updating other states)
+
+    The subcript $T$ is the episode number.
+
+Intuitive explanation: After transitioning from $s_{t-1}$ to $s_t$, you get a better idea of the value of $s_{t-1}$ because now you have more information (the reward $R_t$). With this new information, you can update your estimate of $V(s_{t-1})$.
+
+In other words, your current knowledge (at time $T$) is better than your previous knowledge (at time $T-1$).
 
 ## Bellman equations WITH action:
 
@@ -52,8 +58,9 @@ These are my personal lecture notes for Georgia Tech's [Reinforcement Learning c
     - $Q_T(s, a) = Q_{T-1}(s, a), \text{otherwise.}$
 
 - Approximations in Q-learning:
-    1. If we knew the model, synchronously update:
+    1. If we knew the model, synchronously update (i.e. update all states):
         - $\displaystyle Q_{T}(s,a) = R(s,a) + \gamma \sum_{s'} T(s,a,s')\max_{a'} Q_{T-1}(s',a')$
+        - P.S. $R$ is already known (or can be observed from the environment)
     2. If we knew $Q^*$, sampling asynchronusly update:
         - $\displaystyle Q_{T}(s_{t-1},a_{t-1}) = Q_{T-1}(s_{t-1},a_{t-1}) + \alpha_T \left[ r_{t} + \gamma \max_{a'} Q^*(s_{t},a') - Q_{T-1}(s_{t-1},a_{t-1}) \right]$
 
@@ -65,9 +72,9 @@ These are my personal lecture notes for Georgia Tech's [Reinforcement Learning c
 
         $\displaystyle [BQ](s,a) = R(s,a) + \gamma \sum_{s'} T(s,a,s')\max_{a'} Q(s',a')$
 
-- Think of $B$ as a function that takes a value function and returns a new value function. When we apply $B$ to $Q$, we get a new value function $BQ$ that follows $B$'s definition above.
+- Think of $B$ as a function that takes a value function and returns a new value function. When we apply $B$ to $Q$, we get a new value function $[BQ]$ that follows the definition above.
 
-- Therefore, when apply $B$ to $Q^*$, it's another way of writing the Bellman equation:
+- Therefore, we can rewrite the Bellman equation by applying $B$:
 
     $Q^* = BQ^*$
 
@@ -159,8 +166,60 @@ Recall that $\displaystyle \left\| Q_1 - Q_2 \right\|_\infty = \max_{s,a} \left|
 
 Therefore, $\displaystyle \left\| BQ_1 - BQ_2 \right\|_\infty \leq \gamma \left\| Q_1 - Q_2 \right\|_\infty$
 
-### Max is a non-expansion
+# Max is a non-expansion
 
+For any two functions $f$ and $g$:
 
+$\displaystyle | \max_{a} f(a) - \max_{a} g(a) | \leq \max_{a} | f(a) - g(a) |$
 
+Note that $a$ could be different for each max term. (e.g. $a_1$ for $f$, $a_2$ for $g$, $a_3$ for $|f-g|$)
 
+Non-expansion: The difference between the maximum of two functions is less than or equal to the maximum of $|f-g|$.
+
+## Proof
+
+Without loss of generality, let's assume that
+
+$\displaystyle \max_{a} f(a) \geq \max_{a} g(a)$.
+
+Then, we can get rid of the absolute sign:
+
+$\displaystyle | \max_{a} f(a) - \max_{a} g(a) | = \max_{a} f(a) - \max_{a} g(a)$
+
+Let's say that the maximum of $f$ is at $a_1$ and the maximum of $g$ is at $a_2$:
+
+$ a_1 = \text{argmax}_{a} f(a)$
+
+$ a_2 = \text{argmax}_{a} g(a)$
+
+Then, we can get rid of the max function:
+
+$\displaystyle \max_{a} f(a) - \max_{a} g(a) = f(a_1) - g(a_2)$
+
+Consider $g(a_2)$, since $g$ is at its maximum at $a_2$, any other $a$, such as $a_1$, will give you a smaller or equal value. So we have:
+
+$\displaystyle f(a_1) - g(a_2) \leq f(a_1) - g(a_1)$
+
+> In other words, when $f$ and $g$ take the same $a$ that gives maximum $f$, the difference between them can only be bigger or unchanged.
+
+Putting back the absolute sign:
+
+$\displaystyle f(a_1) - g(a_1) = | f(a_1) - g(a_1) |$
+
+Putting back the max function:
+
+$\displaystyle | f(a_1) - g(a_1) | \leq \max_{a} | f(a) - g(a) |$
+
+> Note the the equal sign is changed to $\leq$ after putting back the max function, because there could be other $a$ that gives you a bigger difference.
+
+Therefore,
+
+$\displaystyle | \max_{a} f(a) - \max_{a} g(a) | \leq \max_{a} | f(a) - g(a) |$
+
+The non-expansion property helps us to prove that the Bellman operator is a contraction mapping.
+
+# Convergence
+
+Define
+
+$ \alpha_t(s,a) = 0$ if $s_t \neq s$ or $a_t \neq a$

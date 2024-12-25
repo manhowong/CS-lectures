@@ -31,7 +31,6 @@ These are my personal lecture notes for Georgia Tech's [Reinforcement Learning c
     - [TD($\lambda$) in terms of k-step estimators](#tdlambda-in-terms-of-k-step-estimators)
 - [TD($\lambda$) empirical performance](#tdlambda-empirical-performance)
 
-
 # RL context
 
 - An RL algorithm takes sequences of $<s,a,r>^*$ (* indicates sequence) as inputs and learns a policy $\pi$:
@@ -519,6 +518,7 @@ Compare the algorithms for TD(1) and TD(0):
     - $E_3$: $V(s_t) = V(s_t) + \alpha_T (r_{t+1} + \gamma r_{t+2} + \gamma^2 r_{t+3} + \gamma^3 V(s_{t+3}) - V(s_t))$
     - $E_k$: $V(s_t) = V(s_t) + \alpha_T (r_{t+1} + \cdots + \gamma^{k-1} r_{t+k} + \gamma^k V(s_{t+k}) - V(s_t))$
     - $E_{\infty}$: $V(s_t) = V(s_t) + \alpha_T (r_{t+1} + \cdots + \gamma^{k-1} r_{t+k} + \cdots - V(s_t))$
+
 
         Note that for $E_{\infty}$, the term $\gamma^k V(s_{t+k})$ drops out because $\gamma^k$ goes to zero as $k$ goes to infinity.
 
