@@ -238,8 +238,12 @@ One may use `console.log()` to see the order of execution and understand how the
         )
     }
     ```
+    
     - Self-closing tags such as `<Button ... />` can be used instead of `<Button> ... </Button>` for components that don't have children
     - `Button` is a custom component, not the HTML `button` element! (It's capitalized to differentiate it from the HTML element)
+        - We pass the event handlers from `Button` to the `onClick` attribute of the HTML `button` element
+        - The prop `onClick` in the `Button` component can be named anything (it doesn't have to match the attribute name in the HTML element)
+
 - We will define the `Display` and `Button` components outside the `App` component (so they can be reused in other components or projects):
 
     ```jsx
