@@ -2,6 +2,8 @@
 
 Study notes and materials for OMSCS graduate courses at Georgia Tech.
 
+- [Machine Learning for Trading (ML4T)](./Machine-Learning-for-Trading/) | CS 7646 SPRING 2025
+
 - [Reinforcement Learning (RL)](./Reinforcement-Learning/) | CS 7642 SPRING 2024
 
 - [Human Computer Interaction (HCI)](./Human-Computer-Interaction/) | CS 6750 SPRING 2024
