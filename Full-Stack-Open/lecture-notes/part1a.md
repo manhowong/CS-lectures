@@ -170,6 +170,7 @@ create-react-app (CRA):
 
 # React Components
 
+- Install *React Developer Tools* browser extension to inspect React components in the browser
 - A React component with the name `App` is defined in `App.jsx`
 - The content of `App` is rendered by the last line in `main.jsx` (`ReactDOM.createRoot(...).render(...)`)
 - In a React app, `index.html` does not have any visible content by default. You may add the content manually, but it is usually rendered through React components:

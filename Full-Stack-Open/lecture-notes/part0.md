@@ -83,6 +83,7 @@
 - Might be helpful:
   - Check `Preserve log`
   - Check `Hide extensions URLs` under `More filters`
+- To view React components, you can install the *React Developer Tools* extension in Chrome. After installing the extension, you can open the `Components` tab in Chrome developer tools to view the React component tree of the page.
 
 
 # HTTP GET request
