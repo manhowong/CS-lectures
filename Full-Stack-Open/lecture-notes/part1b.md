@@ -5,6 +5,7 @@
 - [Variables](#variables)
 - [Arrays](#arrays)
 - [Objects](#objects)
+- [Copying](#copying)
 - [Functions](#functions)
 - [JSX syntax](#jsx-syntax)
 
@@ -41,6 +42,9 @@
 # Arrays
 
 - Declare an array: `const arr = [1, 2, 3]`
+- Create an empty array: `const arr = []`
+- Create an array with a set length: `const arr = new Array(5)` (creates an array with 5 undefined elements)
+- Create an array with a set length and initial values: `const arr = new Array(1, 2, 3)` (creates an array with 3 elements)
 - Access an element: `arr[0])` (the frist element is at index 0)
 - Modify an element: `arr[1] = 4`
 - Add an element: `arr.push(5)`
@@ -96,6 +100,26 @@
     ```
     - `this` refers to the object itself. In this example, `this.name` refers to the `name` property of the object.
     - Methods can also be added after object declaration: `obj.greet = function() { ... }`
+
+# Copying
+
+- Use `...` to shallow copy an object or array
+- e.g. copy an object as follows:
+
+    ```javascript
+    const obj1 = { key1: 'value1', key2: 'value2' }
+    const objCopy = { ...obj1 }   // shallow copy (i.e. only the first level is copied)
+    
+    // The following code will not work because it will just create a new object with a single property 'obj1' that contains the original object
+    // const objCopy = {obj1} 
+    ```
+- Likewise, copy an array with `...`:
+
+    ```javascript
+    const arr1 = [1, 2, 3]
+    const arrCopy = [...arr1]
+    ```
+
 
 # Functions
 
