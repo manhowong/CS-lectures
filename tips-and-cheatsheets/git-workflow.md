@@ -22,6 +22,19 @@ To update the workspace with changes from the remote repository:
 1. *Fetch* changes from the remote repository to the local repository
 2. *Merge* changes from the local repository to the workspace
 
+IMPORTANT: Set up author information for commits:
+- This ensures that your commits are attributed to the correct account when you are using the same device for your personal GitHub and work/school accounts.
+- If you don't set this up, Git will use the system default or the global configuration.
+- `git config user.name "Your Name"`
+- `git config user.email "you@example.com"`
+- To use your work/school account, make sure to set the email to your work/school email address.
+- To verify your configuration, you can use:
+  - `git config user.name`
+  - `git config user.email`
+- To check your global configuration, you can use:
+  - `git config --global user.name`
+  - `git config --global user.email`
+
 # Git commands
 
 - Basic commands
@@ -85,3 +98,25 @@ To update the workspace with changes from the remote repository:
     git tag -a V1 -m "V1"
     git push origin V1
     ```
+
+# .gitignore
+
+- Templates for `.gitignore` files can be found in the [GitHub's gitignore repository](https://github.com/github/gitignore).
+- Example:
+
+    ```
+    # Files to ignore
+    file.txt                    # Ignore ALL files named file.txt in ANY directory
+    *.txt                       # Ignore ALL .txt files in ANY directory (* means any characters)
+    /file.txt                   # Ignore the file.txt in the root directory
+    path/to/file.txt            # Ignore the file.txt in the specified path
+
+    # Directories to ignore
+    temp/                       # Ignore the temp directory and ALL its contents ANYWHERE in the repo
+    /temp/                      # Ignore the temp directory in the root directory
+    path/to/temp/               # Ignore the temp directory in the specified path
+    ```
+    
+    - Leading slash (`/`) indicates root directory.
+    - Trailing slash means it is a directory.
+    - Asterisk (`*`) means any characters.
