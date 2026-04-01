@@ -62,7 +62,7 @@ repeated_list = [list] * n
 # ATTENTION: This creates a list of lists which are references to the same list!
 # When you modify one of them, all of them will change.
 # For example:
-repeated_list = [[]] * 3 # This creates [[], [], []], but all sublists are references to the same list.
+repeated_list = [[]] * 3 # This creates [[], [], []], but all sublists are references to the same list!!
 repeated_list[0].append(1)  # This will assign 1 to all sublists!
 print(repeated_list)  # Output: [[1], [1], [1]] instead of [[1], [], []]
 
